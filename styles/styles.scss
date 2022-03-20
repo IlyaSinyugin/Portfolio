@@ -79,3 +79,24 @@ section{
     display: none;
     transform: translateY(0) scale(1);
 }
+
+// Controls
+.controls{
+    position: fixed; 
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    .control{
+        padding: 1rem;
+        cursor: pointer;
+        background-color: var(--color-grey4);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%
+    }
+}
