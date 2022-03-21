@@ -19,6 +19,7 @@
   --color-grey5: #2a2e35;
   --color-grey6: #12181b;
   --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
 body {
@@ -112,6 +113,16 @@ section {
           transform: translateY(-50%);
 }
 
+.controls .active-btn {
+  background-color: var(--color-secondary) !important;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.controls .active-btn i {
+  color: var(--color-white) !important;
+}
+
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -119,5 +130,23 @@ section {
   width: 55px;
   height: 55px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .7rem 0;
+  -webkit-box-shadow: var(--box-shadow-1);
+          box-shadow: var(--box-shadow-1);
+}
+
+.controls .control i {
+  font-size: 1.5rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
 }
 /*# sourceMappingURL=styles.css.map */

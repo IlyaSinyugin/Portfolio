@@ -18,6 +18,7 @@
     --color-grey5: #2a2e35;
     --color-grey6: #12181b;
     --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
 body{
@@ -91,12 +92,30 @@ section{
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
+    .active-btn{
+        background-color: var(--color-secondary) !important;
+        transition: all .4s ease-in-out;
+        i{
+            color: var(--color-white) !important;
+        }
+    
+    }
     .control{
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey4);
         width: 55px;
         height: 55px;
-        border-radius: 50%
+        border-radius: 50%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        margin: .7rem 0;
+        box-shadow: var(--box-shadow-1);
+        i{
+            font-size: 1.5rem;
+            color: var(--color-grey-2);
+            pointer-events: none;
+    }
     }
 }
