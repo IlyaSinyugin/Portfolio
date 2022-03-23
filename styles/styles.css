@@ -71,24 +71,28 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 
 .sec3 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #6aca87;
 }
 
 .sec4 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #bb4bb2;
 }
 
 .sec5 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #b010d8;
 }
 
 .controls {
