@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
 }
 
-:root{
+:root {
     --color-primary: #191d2b;
     --color-secondary: #27AE60;
-    --color-white: #FFFFFF; 
+    --color-white: #FFFFFF;
     --color-black: #000000;
     --color-grey0: #f8f8f8;
     --color-grey1: #dbe1e8;
@@ -18,89 +18,92 @@
     --color-grey5: #2a2e35;
     --color-grey6: #12181b;
     --br-sm-2: 14px;
-    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
 }
 
-body{
+body {
     background-color: var(--color-primary);
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
     transition: all .4s ease-in-out;
 }
-a{
+
+a {
     display: inline-block;
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
     font-family: inherit;
 }
 
-header{
+header {
     height: 100vh;
     color: var(--color-white);
     overflow: hidden;
 }
 
-section{
+section {
     min-height: 100vh;
     width: 100%;
-    position: absolute; 
+    position: absolute;
     left: 0;
     top: 0;
     padding: 3rem 18rem;
 }
 
-.section{
+.section {
     transform: translateY(-100%) scale(0);
-    transition: all .4s ease-in-out;;
+    transition: all .4s ease-in-out;
+    ;
     background-color: var(--color-primary);
 }
 
-.sec1{
+.sec1 {
     display: none;
     transform: translateY(0) scale(1);
 }
 
-.sec2{
+.sec2 {
     display: none;
     transform: translateY(0) scale(1);
 }
 
-.sec3{
+.sec3 {
     display: none;
     transform: translateY(0) scale(1);
     background-color: rgb(106, 202, 135);
 }
 
-.sec4{
+.sec4 {
     display: none;
     transform: translateY(0) scale(1);
     background-color: rgb(187, 75, 178);
 }
 
-.sec5{
+.sec5 {
     display: none;
     transform: translateY(0) scale(1);
     background-color: rgb(176, 16, 216);
 }
 
-.active{
+.active {
     display: block;
     animation: scaleAnim 1s ease-in-out;
+
     @keyframes scaleAnim {
-        0%{
+        0% {
             transform: translateY(-100%) scaleY(0);
         }
 
-        100%{
+        100% {
             transform: translateY(0) scaleY(1);
         }
     }
 }
 
 // Controls
-.controls{
-    position: fixed; 
+.controls {
+    position: fixed;
     z-index: 10;
     top: 50%;
     right: 3%;
@@ -109,44 +112,50 @@ section{
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
-    .active-btn{
+
+    .active-btn {
         background-color: var(--color-secondary) !important;
         transition: all .4s ease-in-out;
-        i{
+
+        i {
             color: var(--color-white) !important;
         }
-    
+
     }
-    .control{
+
+    .control {
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey4);
         width: 55px;
         height: 55px;
         border-radius: 50%;
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
         margin: .7rem 0;
         box-shadow: var(--box-shadow-1);
-        i{
+
+        i {
             font-size: 1.5rem;
             color: var(--color-grey-2);
             pointer-events: none;
-    }
+        }
     }
 }
 
 /*Header-content*/
-.header-content{
+.header-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
-    .left-header{
+
+    .left-header {
         display: flex;
         align-items: center;
         position: relative;
-        .h-shape{
+
+        .h-shape {
             transition: all .4s ease-in-out;
             width: 65%;
             height: 100%;
@@ -157,49 +166,58 @@ section{
             z-index: -1;
             clip-path: polygon(0 1%, 51% 0, 100% 100%, 0% 100%);
         }
-        .image{
+
+        .image {
             border-radius: var(--br-sm-2);
             height: 90%;
             width: 68%;
             margin-left: 4rem;
             // background-color: var(--color-black);
             transition: all .4s ease-in-out;
-            img{
+
+            img {
                 width: 100%;
                 height: 105%;
                 object-fit: cover;
                 transition: all .4s ease-in-out;
                 filter: saturate(0.95);
+
                 //hover effects 
-                &:hover{
+                &:hover {
                     filter: saturate(1.1);
                 }
             }
         }
     }
-    .right-header{
+
+    .right-header {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-right: 18rem;
-        .name{
+
+        .name {
             font-size: 3rem;
-            span{
+
+            span {
                 color: var(--color-secondary);
             }
         }
-        p{
+
+        p {
             margin: 1.5rem 0;
             line-height: 2rem;
         }
     }
 }
+
 /*Independent Components*/
-.btn-con{
+.btn-con {
     display: flex;
     align-self: flex-start;
 }
-.main-btn{
+
+.main-btn {
     border-radius: 30px;
     color: inherit;
     font-weight: 600;
@@ -210,10 +228,12 @@ section{
     display: flex;
     align-items: center;
     overflow: hidden;
-    .btn-text{
+
+    .btn-text {
         padding: 0 2rem;
     }
-    .btn-icon{
+
+    .btn-icon {
         background-color: var(--color-secondary);
         display: flex;
         align-items: center;
@@ -221,7 +241,8 @@ section{
         border-radius: 50%;
         padding: 1rem;
     }
-    &::before{
+
+    &::before {
         content: '';
         position: absolute;
         top: 0;
@@ -230,7 +251,8 @@ section{
         transition: all .4s ease-out;
         z-index: -1;
     }
-    &:hover{
+
+    &:hover {
         &::before {
             width: 100%;
             height: 100%;
@@ -240,18 +262,22 @@ section{
     }
 }
 
-.main-title{
+.main-title {
     text-align: center;
-    h2{
+
+    h2 {
         position: relative;
         text-transform: uppercase;
         font-size: 4rem;
         font-weight: 700;
-        span{
+
+        span {
             color: var(--color-secondary);
         }
-        .bg-text{
-            position: absolute;
+
+        .bg-text {
+            overflow: visible;
+            position: fixed;
             top: 50%;
             left: 50%;
             color: var(--color-grey-5);
